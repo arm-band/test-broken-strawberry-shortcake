@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+@use "../../foundation" as f;
+
+.c-eyecatch {
+    &Wrapper {
+        height: 70vh;
+        position: relative; // md未満でのキャッチコピーの抑制役
+    }
+    &Inner {
+//        height: calc(70vh - 1.5rem);
+        position: relative;
+        background: {
+            image: url("https://source.unsplash.com/-qQlfYB7pqM/1920x1080");
+            position: center center;
+            repeat: no-repeat;
+            size: cover;
+            attachment: scroll;
+        }
+    }
+    &Textbox {
+        position: absolute;
+        bottom: 18%;
+        left: 10%;
+        max-width: 70%;
+        background-color: rgba(f.$bg-color2, 0.6);
+    }
+    &Copy {
+        font-family: 'Hachi Maru Pop', cursive;
+        @media (min-width: 768px) {
+            position: relative; // md以上でのキャッチコピーの抑制役
+        }
+        h2 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+//            @include media-breakpoint-down(sm) {
+            @media (max-width: 767px) {
+                right: 5%;
+            }
+//            @include media-breakpoint-up(md) {
+            @media (min-width: 768px) {
+                left: -15%;
+            }
+        }
+    }
+}

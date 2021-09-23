@@ -2,12 +2,12 @@
 <%
     parameters = {
         title: 'Home',
-        description: 'Gulpを使用した最低限のフレームワークです。',
+        description: 'ブロークングリッドの実装テストです',
         ogp: {
             card: 'photo',
             account: 'Bredtn_1et',
             type: 'website',
-            image: 'img/hinomotogo.png'
+            image: 'https://source.unsplash.com/fENvSZUzbzU/1920x1080'
         },
         address: '北海道札幌市北区丸山町字辛亥五ノ村30-90',
         postalcode: '001-0000',
@@ -18,9 +18,21 @@
 <%- include('partial/_head', { parameters }) -%>
 <body>
 <%- include('partial/_header') -%>
+<div class="container-fluid c-eyecatch">
+    <div class="row px-0 pb-4 c-eyecatchWrapper">
+        <div class="col-10 col-md-8 c-eyecatchInner">
+            <div class="c-eyecatchTextbox">
+                <p class="py-3 px-2 mb-0">かっこうも前つけといるだ。仲間は十あわて足ぶみのようがむしってしまいまし。楽長は猫町や何を出ているた。</p>
+            </div>
+        </div>
+        <div class="col-2 col-md-4 c-eyecatchCopy">
+            <h2 class="my-0">かっこうも前つけといるだ。</h2>
+        </div>
+    </div>
+</div>
 <main class="l-main">
     <section class="container py-5">
-        <h1><i class="fas fa-fw fa-long-arrow-alt-up mr-2" aria-hidden="true"></i><%= parameters.title %><small class="ml-2" id="hello"></small></h1>
+        <h1><i class="fas fa-fw fa-long-arrow-alt-up mr-2" aria-hidden="true"></i><%= parameters.title %></h1>
         <p><%= parameters.description %></p>
     </section>
     <section class="container pb-5">
