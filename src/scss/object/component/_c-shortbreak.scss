@@ -4,5 +4,7 @@
 
 .c-shortbreak {
     background-color: f.$bg-color2;
-    @include f.maruFont();
+    h2 {
+        @include f.maruFont();
+    }
 }

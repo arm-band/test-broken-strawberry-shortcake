@@ -25,4 +25,41 @@
             }
         }
     }
+    &2 {
+        position: relative;
+        z-index: 1;
+        &_bgimg {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+            height: 80%;
+            @media (max-width: 767px) {
+                width: 90%;
+            }
+            @media (min-width: 768px) {
+                width: 80%;
+            }
+            &::after {
+                content: "";
+                display: block;
+                background: {
+                    image: url("https://source.unsplash.com/Mzy-OjtCI70/1920x1080");
+                    position: bottom right;
+                    repeat: no-repeat;
+                    size: cover;
+                    attachment: scroll;
+                }
+                padding-top: 100%;
+            }
+        }
+        &_box {
+            background-color: f.$bg-color;
+            max-width: 40%;
+            h2 {
+                @include f.maruFont();
+            }
+        }
+    }
 }
