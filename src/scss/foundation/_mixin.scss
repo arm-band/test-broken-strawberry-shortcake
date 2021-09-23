@@ -8,6 +8,10 @@
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+@mixin maruFont() {
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
 //疑似要素に「文字列:」を付与する(電話番号等)
 @mixin pseudoColon($text: "") {
     content: $text + ":";

@@ -3,11 +3,11 @@
 @use "../../foundation" as f;
 
 .c-eyecatch {
-    &Wrapper {
+    &_wrapper {
         height: 70vh;
         position: relative; // md未満でのキャッチコピーの抑制役
     }
-    &Inner {
+    &_inner {
 //        height: calc(70vh - 1.5rem);
         position: relative;
         background: {
@@ -18,14 +18,32 @@
             attachment: scroll;
         }
     }
-    &Textbox {
+    &_textbox {
         position: absolute;
         bottom: 18%;
-        left: 10%;
+//        left: 10%;
+        @media (max-width: 575px) {
+            left: 15px;
+        }
+        @media (min-width: 576px) and (max-width: 767px) {
+            left: calc((100vw - 540px) / 2);
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            left: calc((100vw - 720px) / 2);
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+            left: calc((100vw - 960px) / 2);
+        }
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            left: calc((100vw - 1140px) / 2);
+        }
+        @media (min-width: 1400px) {
+            left: calc((100vw - 1320px) / 2);
+        }
         max-width: 70%;
         background-color: rgba(f.$bg-color2, 0.6);
     }
-    &Copy {
+    &_copy {
         font-family: 'Hachi Maru Pop', cursive;
         @media (min-width: 768px) {
             position: relative; // md以上でのキャッチコピーの抑制役
@@ -34,14 +52,37 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-//            @include media-breakpoint-down(sm) {
-            @media (max-width: 767px) {
-                right: 5%;
+            @media (max-width: 575px) {
+                right: 15px;
             }
-//            @include media-breakpoint-up(md) {
-            @media (min-width: 768px) {
+            @media (min-width: 576px) and (max-width: 767px) {
+                right: calc((100vw - 540px) / 2);
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
                 left: -15%;
+                right: calc((100vw - 720px) / 2);
             }
+            @media (min-width: 992px) and (max-width: 1199px) {
+                left: -15%;
+                right: calc((100vw - 960px) / 2);
+            }
+            @media (min-width: 1200px) and (max-width: 1399px) {
+                left: -15%;
+                right: calc((100vw - 1140px) / 2);
+            }
+            @media (min-width: 1400px) {
+                left: -15%;
+                right: calc((100vw - 1320px) / 2);
+                word-break: keep-all;
+            }
+////            @include media-breakpoint-down(sm) {
+//            @media (max-width: 767px) {
+//                right: 5%;
+//            }
+////            @include media-breakpoint-up(md) {
+//            @media (min-width: 768px) {
+//                left: -15%;
+//            }
         }
     }
 }

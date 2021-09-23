@@ -2,16 +2,13 @@
 <%
     parameters = {
         title: 'Home',
-        description: 'ブロークングリッドの実装テストです',
+        description: 'ブロークングリッドの実装テストです。',
         ogp: {
             card: 'photo',
             account: 'Bredtn_1et',
             type: 'website',
             image: 'https://source.unsplash.com/fENvSZUzbzU/1920x1080'
         },
-        address: '北海道札幌市北区丸山町字辛亥五ノ村30-90',
-        postalcode: '001-0000',
-        tel: '000-000-0000',
         errFlag: false
     }
 -%>
@@ -19,35 +16,46 @@
 <body>
 <%- include('partial/_header') -%>
 <div class="container-fluid c-eyecatch">
-    <div class="row px-0 pb-4 c-eyecatchWrapper">
-        <div class="col-10 col-md-8 c-eyecatchInner">
-            <div class="c-eyecatchTextbox">
+    <div class="row px-0 pb-4 c-eyecatch_wrapper">
+        <div class="col-10 col-md-8 c-eyecatch_inner">
+            <div class="c-eyecatch_textbox">
                 <p class="py-3 px-2 mb-0">かっこうも前つけといるだ。仲間は十あわて足ぶみのようがむしってしまいまし。楽長は猫町や何を出ているた。</p>
             </div>
         </div>
-        <div class="col-2 col-md-4 c-eyecatchCopy">
-            <h2 class="my-0">かっこうも前つけといるだ。</h2>
+        <div class="col-2 col-md-4 c-eyecatch_copy">
+            <h2 class="my-0">そんなんはひとりの棒たのだっ。</h2>
         </div>
     </div>
 </div>
 <main class="l-main">
-    <section class="container py-5">
-        <h1><i class="fas fa-fw fa-long-arrow-alt-up mr-2" aria-hidden="true"></i><%= parameters.title %></h1>
-        <p><%= parameters.description %></p>
+    <div class="container-fluid c-shortbreak">
+        <div class="container py-4">
+            <h1><i class="fas fa-fw fa-birthday-cake mr-2" aria-hidden="true"></i><%= parameters.title %></h1>
+            <p><%= parameters.description %></p>
+        </div>
+    </div>
+    <section class="container py-4">
+        <h2>サンプルテキスト</h2>
+        <p>遅く息でと出るてしまいてセロをなっようましゴーシュをつれてまたやはり一足を本したたい。なかなかかとリボンはがちょろちょろあけだございてこわくんとは途中も子のねどこないまし。トマトは君をさっきでし譜のなか何を飛びでようにな足ぐったがってしばらくくしゃみをするようなを勢をつまんば何かしんにくっていました。</p>
+        <p>「そしてまだはじめの療。い。」なあんだととまって知らなかと鳴らしていきなりゴーシュをこどもをしきりに呆れがセロ弾きですたい。「楽た。ごくごくひくてきう。さまがはできることませてかい。一つというんからぽんぽんこすりきで。わかっも戻っもからだというのにちょっと云いましんで。けれども一杯じっと野鼠のゴーシュと出だはよ。それじゃあみんなばかりはいりで二つのかっこうにあけてあなたの音楽でたべるから鳴っようたのた、あるよ、間もなくおろしけれども行ったてなあ。</p>
     </section>
-    <section class="container pb-5">
-        <h2>連絡先情報</h2>
-        <div class="list-group mb-3">
-            <div class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1"><%= parameters.author %></h5>
-                    <small>※住所・郵便番号・電話番号はいずれもダミーです</small>
-                </div>
-                <p class="mb-1"><span class="c-address c-address_postalcode mr-1"><%= parameters.postalcode %></span> <span class="address"><%= parameters.address %></span></p>
-                <small><a href="tel:<%= parameters.tel %>"><span class="c-address c-address_tel mr-1"><%= parameters.tel %></span></a></small>
+    <section class="container-fluid c-broken1 pt-4">
+        <div class="row py-4">
+            <div class="col-12 col-md-6 px-4 text-center c-broken1_box">
+                <h2>サンプルテキスト</h2>
+                <p>どなりは扉にいきなりとだしてからだを町のようが叩きて手に行くんでぱっと室がつづけてだしです。どんといつもゴーシュをねずみをすまたた。やつまっすぐにゴムのどなりて猫が座ったまし。</p>
+                <p>療見その狩り下手からそれ一拍のままへ猫がとっようたのましは、ここがはまもなく丈夫だでぞ。するとはじめはきょろきょろはここまで、ぶっつかっで二時をはどうしてもパチパチパチッへきいてい教わり。</p>
+                <a href="#" class="btn btn-light mt-3">ボタン</a>
+            </div>
+            <div class="col-12 col-md-6">
+                <picture class="c-broken1_pic">
+                    <source srcset="https://source.unsplash.com/fENvSZUzbzU/640x1136" media="(max-width: 767px)" class="img-fluid c-broken1_img">
+                    <source srcset="https://source.unsplash.com/fENvSZUzbzU/1280x720" media="(min-width: 768) and (max-width: 1199px)" class="img-fluid c-broken1_img">
+                    <source srcset="https://source.unsplash.com/fENvSZUzbzU/1920x1080" media="(min-width: 1200px)" class="img-fluid c-broken1_img">
+                    <img src="https://source.unsplash.com/fENvSZUzbzU/1920x1080" alt="苺のショートケーキ" class="img-fluid c-broken1_img">
+                </picture>
             </div>
         </div>
-        <p>※住所・郵便番号・電話番号はいずれもダミーです。</p>
     </section>
 </main>
 <%- include('partial/_footer') -%>

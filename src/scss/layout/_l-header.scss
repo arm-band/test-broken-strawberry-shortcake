@@ -4,6 +4,7 @@
 
 .l-header {
     .navbar-brand {
+        @include f.maruFont();
         &,
         &:link,
         &:visited {
