@@ -19,5 +19,10 @@
             float: right;
             top: -4.5rem;
         }
+        &_box {
+            h2 {
+                @include f.maruFont();
+            }
+        }
     }
 }

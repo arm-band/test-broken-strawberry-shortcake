@@ -44,7 +44,7 @@
         background-color: rgba(f.$bg-color2, 0.6);
     }
     &_copy {
-        font-family: 'Hachi Maru Pop', cursive;
+        @include f.maruFont();
         @media (min-width: 768px) {
             position: relative; // md以上でのキャッチコピーの抑制役
         }
