@@ -2,8 +2,8 @@
 
 @use "../../foundation" as f;
 
-/* ブロークン アイャッチ1 */
 .c-eyecatch {
+    /* ブロークン アイャッチ1 */
     &_wrapper {
         height: 70vh;
         position: relative; // md未満でのキャッチコピーの抑制役
@@ -87,5 +87,218 @@
 //                left: -15%;
 //            }
         }
+    }
+    /* ブロークン アイャッチ2 */
+    &2 {
+        padding: {
+            left: 0;
+            right: 0;
+        }
+        &_wrapper {
+            height: 70vh;
+            position: relative; // md未満でのキャッチコピーの抑制役
+            margin: {
+                top: 1rem;
+                bottom: 1rem;
+                right: 1rem;
+            }
+            z-index: 1;
+        }
+        &_catch {
+            z-index: 1;
+            @media (min-width: 768px) {
+                position: relative; // md以上でのキャッチコピーの抑制役
+            }
+            & .c-eyecatch2_head {
+                @include f.maruFont();
+                position: absolute;
+                top: 25%;
+                transform: translateY(-50%);
+                @media (max-width: 575px) {
+                    left: 15px;
+                }
+                @media (min-width: 576px) and (max-width: 767px) {
+                    left: calc((100vw - 540px) / 2);
+                }
+                @media (min-width: 768px) and (max-width: 991px) {
+                    right: -15%;
+                    left: calc((100vw - 720px) / 2);
+                }
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    right: -15%;
+                    left: calc((100vw - 960px) / 2);
+                }
+                @media (min-width: 1200px) and (max-width: 1399px) {
+                    right: -15%;
+                    left: calc((100vw - 1140px) / 2);
+                }
+                @media (min-width: 1400px) {
+                    right: -15%;
+                    left: calc((100vw - 1320px) / 2);
+                    word-break: keep-all;
+                }
+////                @include media-breakpoint-down(sm) {
+//                @media (max-width: 767px) {
+//                    left: 5%;
+//                }
+////                @include media-breakpoint-up(md) {
+//                @media (min-width: 768px) {
+//                    right: -15%;
+//                }
+            }
+        }
+        &_inner {
+            z-index: -1;
+            position: relative;
+            background: {
+                image: url("https://source.unsplash.com/cRwZACu3kQI/1920x1080");
+                position: center center;
+                repeat: no-repeat;
+                size: cover;
+                attachment: scroll;
+            }
+        }
+        &_textbox {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+    //        right: 10%;
+            // Bootstrap 5 のブレークポイントに合わせて調整
+            @media (max-width: 575px) {
+                right: 15px;
+            }
+            @media (min-width: 576px) and (max-width: 767px) {
+                // ブラウザの横幅から .container の幅を引いたものを半分にする = .container に対する片側の余白。この計算で外側はブロークンだが内側の要素は .container に合わせることができる
+                right: calc((100vw - 540px) / 2);
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                right: calc((100vw - 720px) / 2);
+            }
+            @media (min-width: 992px) and (max-width: 1199px) {
+                right: calc((100vw - 960px) / 2);
+            }
+            @media (min-width: 1200px) and (max-width: 1399px) {
+                right: calc((100vw - 1140px) / 2);
+            }
+            @media (min-width: 1400px) {
+                right: calc((100vw - 1320px) / 2);
+            }
+            max-width: 70%;
+            background-color: rgba(f.$main-color_l, 0.6);
+            color: f.$bg-color;
+        }
+    }
+    /* ブロークン アイャッチ3 */
+    &3 {
+        &_wrapper {
+            height: 70vh;
+            position: relative; // md未満でのキャッチコピーの抑制役
+        }
+        &_inner {
+            position: relative;
+            background: {
+                image: url("https://source.unsplash.com/XxWxPGXwDU0/1920x1080");
+                position: center center;
+                repeat: no-repeat;
+                size: cover;
+                attachment: scroll;
+            }
+        }
+        &_textbox {
+            position: absolute;
+            bottom: 18%;
+            background-color: rgba(f.$bg-color2, 0.6);
+        }
+        &_catch {
+            @media (min-width: 768px) {
+                position: relative; // md以上でのキャッチコピーの抑制役
+            }
+        }
+        &_head {
+            top: 50%;
+            transform: translateY(-50%);
+            @include f.maruFont();
+            @media (min-width: 1400px) {
+                word-break: keep-all;
+            }
+        }
+        &_head,
+        &_textbox {
+            position: absolute;
+            @media (max-width: 575px) {
+                right: 15px;
+            }
+            @media (min-width: 576px) and (max-width: 767px) {
+                right: calc((100vw - 540px) / 2);
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                left: -15%;
+                right: calc((100vw - 720px) / 2);
+            }
+            @media (min-width: 992px) and (max-width: 1199px) {
+                left: -15%;
+                right: calc((100vw - 960px) / 2);
+            }
+            @media (min-width: 1200px) and (max-width: 1399px) {
+                left: -15%;
+                right: calc((100vw - 1140px) / 2);
+            }
+            @media (min-width: 1400px) {
+                left: -15%;
+                right: calc((100vw - 1320px) / 2);
+            }
+        }
+    }
+}
+
+/* ブロークン アイキャッチ2 新着情報カルーセル */
+.c-news {
+    position: absolute;
+    bottom: 0;
+    background-color: f.$bg-color2;
+    @media (max-width: 575px) {
+        $margin-ratio: 15px;
+        left: $margin-ratio;
+        width: min(100%, calc(100% - $margin-ratio));
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+        $margin-ratio: calc((100vw - 540px) / 2);
+        left: $margin-ratio;
+        width: min(100%, calc(100% - $margin-ratio));
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        $margin-ratio: calc((100vw - 720px) / 2);
+        left: $margin-ratio;
+        width: 100%;
+        right: -15%;
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+        $margin-ratio: calc((100vw - 960px) / 2);
+        left: $margin-ratio;
+        width: 100%;
+        right: -15%;
+    }
+    @media (min-width: 1200px) and (max-width: 1399px) {
+        $margin-ratio: calc((100vw - 1140px) / 2);
+        left: $margin-ratio;
+        width: 100%;
+        right: -15%;
+    }
+    @media (min-width: 1400px) {
+        $margin-ratio: calc((100vw - 1320px) / 2);
+        left: $margin-ratio;
+        width: 100%;
+        right: -15%;
+    }
+    &_list {
+        margin-bottom: 0;
+        &Item,
+        &Title {
+            padding-left: 1rem;
+        }
+    }
+    &_pagination {
+        color: f.$main-color;
+        font-weight: bold;
     }
 }
