@@ -4,6 +4,8 @@
 @use "sass:math";
 
 .c-broken {
+    /* ブロークン1 */
+    /* 画像を上に持ち上げる */
     &1 {
         position: relative;
         background-color: f.$bg-color2;
@@ -26,6 +28,8 @@
             }
         }
     }
+    /* ブロークン2 */
+    /* 背景画像とコンテナを重ねる */
     &2 {
         position: relative;
         z-index: 1;
@@ -40,21 +44,14 @@
                 width: 85%;
                 &::after {
                     background-image: url("https://source.unsplash.com/oXfOK1ymtPU/720x1280");
-                    padding-top: 100%;
+                    height: 100vh;
                 }
             }
-            @media (min-width: 768px) and (max-width: 1199px) {
+            @media (min-width: 768px) {
                 width: 80%;
                 &::after {
                     background-image: url("https://source.unsplash.com/oXfOK1ymtPU/1920x1080");
-                    padding-top: 70%;
-                }
-            }
-            @media (min-width: 1200px) {
-                width: 80%;
-                &::after {
-                    background-image: url("https://source.unsplash.com/oXfOK1ymtPU/1920x1080");
-                    padding-top: 40%;
+                    height: 50vh;
                 }
             }
             &::after {
@@ -76,6 +73,8 @@
             }
         }
     }
+    /* ブロークン3 */
+    /* 背景色が突き抜ける */
     &3 {
         position: relative;
         overflow: hidden;
@@ -85,10 +84,10 @@
             content: "";
             display: block;
             width: 100%;
-            height: 100%;
-            padding-top: 100%;
+            height: 50vh;
             background-color: f.$bg-color2;
             z-index: -1;
+            /* アイキャッチの .container の調整と同じ技法。ただし、2で割っただけではグリッドのガイドラインに合致してしまうため、その後に1より大きな数 $ratio でさらに割ることで右から押し込まれる位置を調整することでグリッドのガイドラインを崩す */
             $ratio: math.div(3, 2);
             @media (max-width: 575px) {
                 right: calc(15px / $ratio);

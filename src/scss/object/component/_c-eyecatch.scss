@@ -2,6 +2,7 @@
 
 @use "../../foundation" as f;
 
+/* ブロークン アイャッチ1 */
 .c-eyecatch {
     &_wrapper {
         height: 70vh;
@@ -22,10 +23,12 @@
         position: absolute;
         bottom: 18%;
 //        left: 10%;
+        // Bootstrap 5 のブレークポイントに合わせて調整
         @media (max-width: 575px) {
             left: 15px;
         }
         @media (min-width: 576px) and (max-width: 767px) {
+            // ブラウザの横幅から .container の幅を引いたものを半分にする = .container に対する片側の余白。この計算で外側はブロークンだが内側の要素は .container に合わせることができる
             left: calc((100vw - 540px) / 2);
         }
         @media (min-width: 768px) and (max-width: 991px) {
