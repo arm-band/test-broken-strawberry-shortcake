@@ -204,49 +204,51 @@
                 attachment: scroll;
             }
         }
-        &_textbox {
-            position: absolute;
-            bottom: 18%;
-            background-color: rgba(f.$bg-color2, 0.6);
-        }
         &_catch {
             @media (min-width: 768px) {
                 position: relative; // md以上でのキャッチコピーの抑制役
             }
+            &Box {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                @media (max-width: 575px) {
+                    right: 15px;
+                }
+                @media (min-width: 576px) and (max-width: 767px) {
+                    right: calc((100vw - 540px) / 2);
+                }
+                @media (min-width: 768px) and (max-width: 991px) {
+                    left: -15%;
+                    right: calc((100vw - 720px) / 2);
+                }
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    left: -15%;
+                    right: calc((100vw - 960px) / 2);
+                }
+                @media (min-width: 1200px) and (max-width: 1399px) {
+                    left: -15%;
+                    right: calc((100vw - 1140px) / 2);
+                }
+                @media (min-width: 1400px) {
+                    left: -15%;
+                    right: calc((100vw - 1320px) / 2);
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 35%;
+            }
         }
         &_head {
-            top: 50%;
-            transform: translateY(-50%);
             @include f.maruFont();
             @media (min-width: 1400px) {
                 word-break: keep-all;
             }
         }
-        &_head,
         &_textbox {
-            position: absolute;
-            @media (max-width: 575px) {
-                right: 15px;
-            }
-            @media (min-width: 576px) and (max-width: 767px) {
-                right: calc((100vw - 540px) / 2);
-            }
-            @media (min-width: 768px) and (max-width: 991px) {
-                left: -15%;
-                right: calc((100vw - 720px) / 2);
-            }
-            @media (min-width: 992px) and (max-width: 1199px) {
-                left: -15%;
-                right: calc((100vw - 960px) / 2);
-            }
-            @media (min-width: 1200px) and (max-width: 1399px) {
-                left: -15%;
-                right: calc((100vw - 1140px) / 2);
-            }
-            @media (min-width: 1400px) {
-                left: -15%;
-                right: calc((100vw - 1320px) / 2);
-            }
+            background-color: rgba(f.$bg-color2, 0.6);
         }
     }
 }
